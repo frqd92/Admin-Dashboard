@@ -10,8 +10,84 @@
 body{
     background: black;
     color: white;
+    padding: 20px 30px;
 }
 
+/*Main Grid*/
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    
+   
+}
+/* header stuff */
+header{
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 1;
+
+    display: grid;
+    align-self: center;
+    grid-template-columns: 1fr 3fr 1fr;
+    border-bottom: 1px solid white;
+}
+header .profile-nav{
+    background-color: rgba(86, 148, 203, 0.189);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* Nav Stuff */
+nav{
+    grid-column: 1/ span 1;
+    grid-row: 1 /span 2;
+    align-self: center;
+    border-right: 1px solid white;
+}
+nav .logo{
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+
+}
+nav ul{
+
+    list-style: none;
+}
+/* main stuff */
+
+main{
+    grid-column: 2/ span 1;
+    grid-row: 2 / span 1;
+}
+/* aside stuff */
+aside{
+    grid-column: 3 /span 1;
+    grid-row: 2 / span 1;
+    border-left: 1px solid white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr;
+}
+
+aside .profile-content{
+    background-color: rgba(240, 248, 255, 0.189);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------*/
 .logo img{
     width: 35px;
 }
