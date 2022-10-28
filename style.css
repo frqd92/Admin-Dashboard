@@ -1,141 +1,184 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Comfortaa:wght@300&family=Raleway:wght@200&family=Comfortaa:wght@300&display=swap');
+
+/* font-family: 'Baloo 2', cursive;
+font-family: 'Comfortaa', cursive; 
+font-family: 'Raleway', sans-serif;*/
 :root{
 
 }
 
-
 *{
-    margin:0;
+    margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background: black;
-    color: white;
-    padding: 20px 30px;
+
 }
 
-/*Main Grid*/
+body{
+    background: rgb(50, 47, 47);
+    color: white;
+  
+}
 
 .grid-container{
+    padding-left: 85px;
     display: grid;
-    grid-template-columns: 0.9fr 4fr 1fr;
-    grid-template-rows: 1fr 7fr;
-    
-   
+    grid-template-columns: 8fr 1fr;
+    grid-template-rows: 1fr 5fr;
 }
 /* header stuff */
-header{
-    grid-column: 2 / span 2;
-    grid-row: 1 / span 1;
-    background:rgba(240, 248, 255, 0.189);
+header {
+    padding: 10px 0px;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    justify-items: center;
+
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background: black;
+}
+header .search-bar {
+    padding-right: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    align-items: center;
+    min-width: 70%;
+    justify-self: end;
+  
+}
+header input{
+    height: 1.2rem;
+    background: rgb(255, 255, 255);
+    border-radius: 25px;
+    border: none;
+    padding: 5px 5px 5px 10px;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+    font-family: 'Baloo 2', cursive;;
+}
+input:focus{
+    outline: none;
+}
+header h2 {
+    margin-left: 280px;
+    align-self: center;
+    justify-self: end;
+    font-family: 'Raleway', sans-serif;
+    white-space: nowrap;
+}
+.search-bar label{
+    justify-self: end;
+    margin-right: 5px;
+}
+.search-bar img{
+    width: 30px;
+    
+}
+
+
+
+
+
+
+/* main stuff */
+main{
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+
+
+
+
+/* aside stuff */
+aside{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background: black;
+}
+.profile-icons{
+    height:80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
  
 }
-header .profile-nav{
-    background-color: rgba(86, 148, 203, 0.189);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+aside img {
+    width: 35px;
 }
 
+/* nav stuff */
+nav {
 
-/* Nav Stuff */
-nav{
-   padding: 1rem;
-    grid-column: 1/ span 1;
-    grid-row: 1 /span 2;
+    position: fixed;
+    width: 230px;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    border-right: 1px solid white;
-}
-
-nav > img{
-
-    width: 40px;
-    grid-column: 1 /span 1;
-    grid-row: 1 / span 1;
-    margin-bottom: 3rem;
-    justify-self: center;
-   
+    justify-items: center;
+    grid-template-columns: 1fr 3fr;    
+    top: -15px;
+    left: 0;
     
-}
-nav h1 {
-    grid-column: 2 / span 1;
-    font-family: 'Baloo 2', cursive;
-    justify-self: start;
-    margin-left: 0.6rem;
-    font-size: 1.5rem;
 
 }
-nav ul{
-    list-style: none;
-    grid-column: 1 / span 2;
-    grid-row: 2 / span 1;
-
-}
-
-nav li {
-    font-family: 'Comfortaa', cursive;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    margin-bottom: 2rem;
-    align-items: center;
-    justify-items: start;
-    font-size: 1.2rem;
-}
-
-nav>ul>li:nth-child(4){
-   margin-bottom: 4rem;
-}
-nav>ul>li:last-child{
-    margin-bottom: 0;
- }
-
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-/* main stuff */
-main{
-    grid-column: 2/ span 1;
-    grid-row: 2 / span 1;
-    background-color: rgba(124, 128, 124, 0.223);
-}
-/* aside stuff */
-aside{
-    grid-column: 3 /span 1;
-    grid-row: 2 / span 1;
-
+.icons{
+    grid-column: 1 / 2;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 6fr;
+    grid-template-rows: 2.2fr repeat(6, 1fr);
+    background: black;
+   
+}
+.links {
+    
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr repeat(6, 1fr);
+    align-items: center;
+    background: rgb(80, 25, 25);
+    padding: 0 20px;
 }
 
-aside .profile-content{
+.links-hover{
+   display:none;
   
 }
 
 
-
-
-
-
-
-
-
-
-
-
-/*---------------*/
-
-
-.icon{
-
-    max-width: 30px;
-   
+.links h1 {
+    font-family: 'Baloo 2', cursive;
+    white-space: nowrap;
+    text-transform: uppercase;
 }
+.icons li {
+    list-style: none;
+    margin-bottom: 1rem;
+    align-self: center;
+    justify-self: center;
+    margin-right: 30px;
+    margin-left: 20px;
+}
+
+
+.icons > img {
+    width: 50px;
+   align-self: center;
+   margin-left: 20px;
+}
+
+
+li img {
+    width: 35px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Comfortaa', cursive;
+ 
+}
+.links li {
+    list-style: none;
+}
+
