@@ -6,6 +6,7 @@ font-family: 'Raleway', sans-serif;*/
 :root{
     --bg-black: #000000;
     --bg-main : #36434f;
+    --nav-links: rgba(43, 42, 54, 0.81);
     --card: rgba(114, 100, 100, 0.29);
 }
 
@@ -23,7 +24,7 @@ body{
 
 .grid-container{
     display: grid;
-    grid-template-columns: 9fr 1fr;
+    grid-template-columns: 9fr 1.5fr;
     grid-template-rows: 1fr 91vh;
 }
 /* header stuff */
@@ -43,6 +44,7 @@ header {
 header > img {
     width: 45px;
    align-self: center;
+   border-bottom: 1px solid rgb(185, 177, 177);
 
 }
 header h1{
@@ -75,6 +77,7 @@ header .search-bar {
 .search-bar img{
     width: 30px;
     margin-top: 8px;
+
 }
 
 header input{
@@ -116,7 +119,6 @@ aside img {
 
 /* nav stuff */
 nav {
-
     position: fixed;
     width: 200px;
     display: grid;
@@ -159,7 +161,9 @@ nav {
     opacity: 0;
     transition: visibility 0s, opacity 0.2s linear;
     border-radius: 50px 0 0 0;
-    background: rgba(255, 255, 255, 0.392);
+    background: var(--nav-links);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
 
 
 }
@@ -193,11 +197,11 @@ main{
     grid-row: 2 / 3;
     margin-left:80px;
     border-radius: 50px 0 0 0;
-    padding: 50px;
+    padding: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     /* background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
-
+    gap: 20px;
     background-image: linear-gradient(to right, #0f0c29, #1e1b40, #1a1a2c);
 
 
@@ -208,10 +212,140 @@ main{
 /* cards */
 
 .card{
-    width: 200px;
-    height: 200px;
+    padding: 20px;
+    max-height: 350px;
+    min-width: 550px;
     background: var(--card);
     border-radius: 30px;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-    
+    font-family: 'Raleway', sans-serif;
+    list-style: none;
 }
+
+.welcome > p{
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 1.3rem;
+    text-align: center;
+}
+.to-do{
+    background: rgba(255, 251, 0, 0.227);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    letter-spacing: 0.1rem;
+
+
+}
+.to-do p{
+    margin-bottom: 15px;
+    font-weight: 900;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #000000;
+    font-family: 'Baloo 2', cursive;
+}
+.to-do ul{
+    list-style: none;
+}
+
+.to-do li {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 4fr 3fr 2fr;
+    align-items: center;
+    border-bottom: 0.1px solid rgb(66, 64, 64);
+}
+.to-do li .bar {
+    width: 100%;
+}
+.to-do button {
+    background: var(--nav-links);
+    border: 0.1px solid rgb(108, 100, 19);
+    width: 6.5rem;
+    height: 1.5rem;
+    border-radius: 4px;
+    font-family: 'Comfortaa', cursive; 
+    color: aliceblue;
+
+}
+.welcome-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+#add-btn{
+    justify-self: end;
+}
+
+.to-do .left-side {
+    font-weight:900;
+    color: #000000;
+    font-size: 1.1rem;
+    font-family: 'Baloo 2', cursive;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* bullshit progress bars */
+.bar {
+    display: inline-block;
+    width: 30%;
+    background-color: rgb(86, 65, 65);
+    border-radius: 10px;
+  }
+.bar-progress{
+    background-color: rgba(255, 247, 0, 0.579);
+    border-radius: 10px;
+    height: 10px;
+
+}
+
+
+.steps {
+    width: 75%;
+    animation-fill-mode:both; 
+    animation: progressBar1 2s ease-in-out;
+}
+@keyframes progressBar1 {
+    0% { width: 0; }
+    100% { width: 75%; }
+  }
+.cardio {
+    width: 56%;    
+    animation-fill-mode:both; 
+    animation: progressBar2 2.3s ease-in-out;
+}
+@keyframes progressBar2 {
+    0% { width: 0; }
+    100% { width: 56%; }
+  }
+.weights {
+    animation-fill-mode:both; 
+    animation: progressBar3 1.8s ease-in-out;
+}
+@keyframes progressBar3 {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }
+
+
+.sleep {
+    width: 90%;
+    animation-fill-mode:both; 
+    animation: progressBar4 2.1s ease-in-out;
+}
+
+@keyframes progressBar4 {
+    0% { width: 0; }
+    100% { width: 90%; }
+  }
