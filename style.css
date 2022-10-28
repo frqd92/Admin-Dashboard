@@ -14,35 +14,57 @@ font-family: 'Raleway', sans-serif;*/
 }
 
 body{
-    background: rgb(50, 47, 47);
+    background: black;
     color: white;
   
 }
 
 .grid-container{
-    padding-left: 85px;
+  
     display: grid;
-    grid-template-columns: 8fr 1fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 9fr 1fr;
+    grid-template-rows: 1fr 100vh;
 }
 /* header stuff */
 header {
     padding: 10px 0px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 4fr 2.5fr 18fr;
     width: 100%;
-    justify-items: center;
-
+    padding: 0 20px;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     background: black;
+    position: sticky;
+    top: 0px;
+
+}
+header > img {
+    width: 45px;
+   align-self: center;
+
+}
+header h1{
+    font-family: 'Baloo 2', cursive;
+    white-space: nowrap;
+    font-size: 1.7rem;
+    justify-self: start;
+    align-self: center;
+    margin-top: 1px;
+    letter-spacing: 0.2rem;
+}
+header h2 {
+    align-self: center;
+    justify-self: center;
+    font-family: 'Raleway', sans-serif;
+    white-space: nowrap;
 }
 header .search-bar {
-    padding-right: 2rem;
+    padding-right: 4rem;
     display: grid;
-    grid-template-columns: 1fr 9fr;
+    grid-template-columns: 1fr 3fr;
     align-items: center;
-    min-width: 70%;
+    min-width: 50%;
     justify-self: end;
   
 }
@@ -59,13 +81,7 @@ header input{
 input:focus{
     outline: none;
 }
-header h2 {
-    margin-left: 280px;
-    align-self: center;
-    justify-self: end;
-    font-family: 'Raleway', sans-serif;
-    white-space: nowrap;
-}
+
 .search-bar label{
     justify-self: end;
     margin-right: 5px;
@@ -82,12 +98,12 @@ header h2 {
 
 /* main stuff */
 main{
+    background: rgb(22, 27, 46);
     grid-column: 1 / 3;
     grid-row: 2 / 3;
+    margin-left:80px;
+    border-radius: 50px 0 0 0;
 }
-
-
-
 
 
 /* aside stuff */
@@ -95,6 +111,9 @@ aside{
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     background: black;
+    position: sticky;
+    top: 0px;
+
 }
 .profile-icons{
     height:80px;
@@ -112,11 +131,11 @@ aside img {
 nav {
 
     position: fixed;
-    width: 230px;
+    width: 200px;
     display: grid;
     justify-items: center;
-    grid-template-columns: 1fr 3fr;    
-    top: -15px;
+    grid-template-columns: 1fr 2fr;    
+    top: 80px;
     left: 0;
     
 
@@ -125,47 +144,46 @@ nav {
     grid-column: 1 / 2;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2.2fr repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     background: black;
+    width: 75px;
+    align-items: center;
    
 }
-.links {
-    
-    grid-column: 2 / 3;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr repeat(6, 1fr);
-    align-items: center;
-    background: rgb(80, 25, 25);
-    padding: 0 20px;
-}
 
-.links-hover{
-   display:none;
+.icons li {
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-self: center;
+    justify-self: center;
+  
   
 }
 
 
-.links h1 {
-    font-family: 'Baloo 2', cursive;
-    white-space: nowrap;
-    text-transform: uppercase;
+.links {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:repeat(6, 1fr);
+    align-items: center;
+    background: rgb(80, 25, 25);
+    padding: 0 10px;
+ 
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+    border-radius: 50px 0 0 0;
 }
-.icons li {
-    list-style: none;
-    margin-bottom: 1rem;
-    align-self: center;
-    justify-self: center;
-    margin-right: 30px;
-    margin-left: 20px;
+
+.links-hover{
+    visibility: visible;
+    opacity: 1;
 }
 
 
-.icons > img {
-    width: 50px;
-   align-self: center;
-   margin-left: 20px;
-}
+
 
 
 li img {
