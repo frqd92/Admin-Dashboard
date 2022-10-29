@@ -72,7 +72,7 @@ header .search-bar {
     display: grid;
     grid-template-columns: 1fr 4fr;
     align-items: center;
-    min-width: 60%;
+    min-width: 100%;
     justify-self: end;
 }
 .search-bar label{
@@ -217,6 +217,7 @@ main{
     padding: 20px;
     font-family: 'Comfortaa', cursive; 
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    user-select: none;
 
 }
 .hide-ann, .show-ann {
@@ -229,6 +230,7 @@ main{
     justify-self: center;
     position: sticky;
     top: 80px;
+    border-radius: 5px;
 }
 
 .hide-ann:hover, .show-ann:hover{
@@ -272,13 +274,35 @@ main{
     grid-column: 1 / 2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-auto-rows: 1fr 1fr;
-
+    grid-auto-rows: 1fr;
+    justify-items: center;
+    row-gap: 50px;
 
 }
 .card-container-hidden-ann{
     margin-left: 100px;
-}                                       
+}              
+
+.welcome {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.weekly{
+    grid-column: 3 / 5;
+}
+
+.devices{
+    grid-column: 1 / 2;
+}
+.stats{
+    grid-column: 2 / 3;
+}
+.heart-rate{
+    grid-column: 3 / 5;
+}
+
+
 .card{
     padding: 20px;
     max-height:400px;
@@ -286,8 +310,6 @@ main{
     background: var(--card);
     border-radius: 30px;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-    user-select: none;
-    list-style: none;
     overflow: hidden;
     width: clamp(300px, 90%, 550px);
 }
@@ -314,10 +336,8 @@ main{
 
 
 }
-.welcome {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-}
+                                                    /* Welcome card */
+
 .welcome > p {
     margin-bottom: 30px;
 }
@@ -361,7 +381,7 @@ main{
 #add-btn{
     justify-self: end;
 }
-#add-btn:hover, #remove-btn:hover{
+#add-btn:hover, #remove-btn:hover, .add-devices:hover{
    background: rgb(74, 61, 61);
 }
 
@@ -421,8 +441,6 @@ main{
     0% { width: 0; }
     100% { width: 100%; }
   }
-
-
 .sleep {
     width: 90%;
     animation-fill-mode:both; 
@@ -435,7 +453,6 @@ main{
 
                                                 /* card weekly */
 .weekly{
-    grid-column: 3 / 5;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 3fr ;
@@ -467,19 +484,17 @@ select{
 
                                                 /* card devices */
 
-/* font-family: 'Baloo 2', cursive;
-font-family: 'Comfortaa', cursive; 
-font-family: 'Raleway', sans-serif;
-font-family: 'Montserrat', sans-serif;*/
+
 .devices{
-    grid-column: 1 / 2;
-    min-width: 260px;
+    min-width: 70%;
+    max-width: 240px;
     max-height: 200px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     white-space: nowrap;
     display: grid;
     justify-items: center;
+   
 }
                                                
 .devices li{
@@ -488,7 +503,7 @@ font-family: 'Montserrat', sans-serif;*/
     align-items: center;
     padding: 5px;
     margin-bottom: 20px;
-    border-bottom: 0.1px solid rgba(227, 217, 217, 0.471);
+    border-bottom: 0.1px solid rgba(227, 217, 217, 0.22);
     list-style: none;
 }
 .disconnect{
@@ -499,6 +514,49 @@ font-family: 'Montserrat', sans-serif;*/
     font-family: 'Baloo 2', cursive;
     color: rgb(235, 237, 246);
     margin-left: 5px;
+    border-radius: 5px;
+}
+.disconnect:hover{
+    background-color: #653535;
+}
+
+                                                /* body composition */
+/* font-family: 'Baloo 2', cursive;
+font-family: 'Comfortaa', cursive; 
+font-family: 'Raleway', sans-serif;
+font-family: 'Montserrat', sans-serif;*/
+.stats{
+    min-width: 70%;
+    max-width: 200px;
+    max-height: 200px;
+    display: grid;
+}
+
+.stats li{
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 13px;
+    border-bottom: 0.1px solid rgba(122, 115, 115, 0.399);
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+}
+.stats button {
+    justify-self: center;
+}
+.stats p{
+
+}
+.stats div{
+    
 }
 
                                                 /* card heart */
+.heart-rate{
+    height: 200px;
+   display: grid;
+   justify-items: center;
+}
+.heart-rate img{
+   width: 85%
+}
+
