@@ -10,6 +10,8 @@ font-family: 'Montserrat', sans-serif;*/
     --bg-main : #36434f;
     --nav-links: rgba(43, 42, 54, 0.81);
     --card: rgba(114, 100, 100, 0.29);
+    --card1-inner: rgba(88, 85, 58, 0.227);   /* --card1-inner: rgba(255, 251, 0, 0.227); yellowish*/
+ 
 }
 
 *{
@@ -166,9 +168,6 @@ nav {
     border-radius: 50px 0 0 0;
     background: var(--nav-links);
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-
-
-
 }
 
 .links-hover{
@@ -195,33 +194,107 @@ li img {
 
                                                 /* main stuff */
 main{
-    /* background: var(--bg-main); */
     grid-column: 1 / 3;
     grid-row: 2 / 3;
+    height: 100vh;
     margin-left:80px;
     border-radius: 50px 0 0 0;
-    padding: 40px;
+    padding: 40px 10px 40px 40px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 10fr 1fr;
     background: linear-gradient(to right, #0f0c29, #1e1b40, #1a1a2c);
+
+    
 }
+                                            /* announcements  */
+
+.announcements{
+    /* height:100vh; */
+    background: rgba(52, 54, 75, 0.246);
+    justify-self: end;
+    border-radius: 20px;
+    display: grid;
+    padding: 20px;
+    font-family: 'Comfortaa', cursive; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.hide-ann, .show-ann {
+    border: none;
+    width: 140px;
+    height: 20px;
+    font-family: 'Baloo 2', cursive;
+    color: white;
+    background: #261e6d;
+    justify-self: center;
+    position: sticky;
+    top: 80px;
+}
+
+.hide-ann:hover, .show-ann:hover{
+    background: #382ab7;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}    
+
+.show-ann{
+    display: none;
+    width: calc(8vw + 20px);
+    font-size: calc(1vw - 3px);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;  
+}
+
+
+.announcements > h2{
+    text-align: center;
+    margin-bottom: 5px;
+}       
+.announcements h4{
+    color: rgb(244, 244, 247);
+    text-align: center;
+    margin-bottom: 10px;
+}
+.ann{
+    margin-bottom: 20px;
+    border: 0.1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+}
+.ann p{
+    color: rgb(132, 79, 79);
+}                         
+
+
+
 
                                                 /* cards */
                                                 /* card Welcome */
+.card-container{
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr 1fr;
 
+
+}
+.card-container-hidden-ann{
+    margin-left: 100px;
+}                                       
 .card{
     padding: 20px;
-    max-height:410px;
-    min-width: 550px;
+    max-height:400px;
+    /* width: clamp(300px, 80%, 550px); */
     background: var(--card);
     border-radius: 30px;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     user-select: none;
     list-style: none;
+    overflow: hidden;
+    width: clamp(300px, 90%, 550px);
 }
-
-.welcome > p, .weekly > p{
+.card-ann-hidden{
+      width: clamp(300px, 80%, 550px);
+}
+.card-header{
     margin-bottom: 10px;
     width: 100%;
     font-size: 1.3rem;
@@ -233,7 +306,7 @@ main{
     text-shadow: 2px 2px 5px rgba(45,57,206,0.73);
 }
 .to-do{
-    background: rgba(255, 251, 0, 0.227);
+    background: var(--card1-inner);
     padding: 20px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px, rgba(0, 0, 0, 0.2) 0px 5px 10px -3px, rgba(0, 0, 0, 0.2) 0px -2px 0px inset;
@@ -241,7 +314,10 @@ main{
 
 
 }
-
+.welcome {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
 .welcome > p {
     margin-bottom: 30px;
 }
@@ -266,7 +342,7 @@ main{
 .to-do li .bar {
     width: 100%;
 }
-.to-do button {
+.to-do button, .add-devices {
     background: var(--nav-links);
     border: 0.1px solid rgb(108, 100, 19);
     width: 6.5rem;
@@ -359,6 +435,7 @@ main{
 
                                                 /* card weekly */
 .weekly{
+    grid-column: 3 / 5;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 3fr ;
@@ -377,13 +454,51 @@ select{
 }
 
 .weekly-graph .graph-time{
-   width: 88%;
-   margin-left: 20px;
+   width: 85%;
+   margin-left: 32px;
 
 }
 
 .weekly-graph .graph-calories{
-    width: 88%;
-    margin-left: 20px;
+    width: 85%;
+    margin-left: 32px;
    display: none;
 }
+
+                                                /* card devices */
+
+/* font-family: 'Baloo 2', cursive;
+font-family: 'Comfortaa', cursive; 
+font-family: 'Raleway', sans-serif;
+font-family: 'Montserrat', sans-serif;*/
+.devices{
+    grid-column: 1 / 2;
+    min-width: 260px;
+    max-height: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    white-space: nowrap;
+    display: grid;
+    justify-items: center;
+}
+                                               
+.devices li{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-bottom: 0.1px solid rgba(227, 217, 217, 0.471);
+    list-style: none;
+}
+.disconnect{
+    border: 0.1px solid rgba(111, 103, 103, 0.636);
+    background-color: rgb(175, 94, 94);
+    width: 70px;
+    height:20px;
+    font-family: 'Baloo 2', cursive;
+    color: rgb(235, 237, 246);
+    margin-left: 5px;
+}
+
+                                                /* card heart */

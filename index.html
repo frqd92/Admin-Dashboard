@@ -20,48 +20,93 @@
         </header>
     
         <main>
-            <div class="card welcome">
-            <p>Welcome <span class="vag-pwner">VagPwner420</span></p>
-            <div class="to-do">
-                <p>Daily Goals</p>
-                <ul>
-                    <li>
-                        <span class="left-side">Steps</span> <span class="right-side">7,500 / 10,000 </span>
-                        <div class="bar">
-                        <div class="bar-progress steps"></div>
-                    </li>
-                    <li>
-                        <span class="left-side">Cardio</span> <span class="right-side">17min / 30min</span>
-                        <div class="bar">
-                        <div class="bar-progress cardio"></div>
-                    </li>
-                    <li>
-                        <span class="left-side">Weight Training</span> <span class="right-side">63min / 60min</span>
-                        <div class="bar">
-                        <div class="bar-progress weights"></div>
-                    </li>
-                    <li>
-                        <span class="left-side">Sleep</span> <span class="right-side">7.2hr / 8hr</span>
-                        <div class="bar">
-                        <div class="bar-progress sleep"></div>
-                    </li>
-                </ul>
-                <div class="welcome-buttons">
-                    <button id="add-btn">Add</button> 
-                    <button id="remove-btn">Remove</button> 
-                </div>
+            <div class="card-container">
+                <div class="card welcome">
+                    <p class="card-header">Welcome <span class="vag-pwner">VagPwner420</span></p>
+                    <div class="to-do">
+                        <p>Daily Goals</p>
+                        <ul>
+                            <li>
+                                <span class="left-side">Steps</span> <span class="right-side">7,500 / 10,000 </span>
+                                <div class="bar">
+                                <div class="bar-progress steps"></div>
+                            </li>
+                            <li>
+                                <span class="left-side">Cardio</span> <span class="right-side">17min / 30min</span>
+                                <div class="bar">
+                                <div class="bar-progress cardio"></div>
+                            </li>
+                            <li>
+                                <span class="left-side">Weight Training</span> <span class="right-side">63min / 60min</span>
+                                <div class="bar">
+                                <div class="bar-progress weights"></div>
+                            </li>
+                            <li>
+                                <span class="left-side">Sleep</span> <span class="right-side">7.2hr / 8hr</span>
+                                <div class="bar">
+                                <div class="bar-progress sleep"></div>
+                            </li>
+                        </ul>
+                        <div class="welcome-buttons">
+                            <button id="add-btn">Add</button> 
+                            <button id="remove-btn">Remove</button> 
+                        </div>
+                    </div>
+                    </div>
+                    <div class="card weekly">
+                        <p class="card-header">Weekly Activity Overview</p>
+                        <select name="activity-type" id="select-weekly" >
+                            <option value="time">time (min)</option>
+                            <option value="calories">Calories burned (kcal)</option>
+                        </select>
+                        <div class="weekly-graph">
+                            <img src="images/graph-time.png" class="graph-time" alt="time graph">
+                            <img src="images/graph-calories.png" class="graph-calories" alt="calories graph">
+                        </div>
+                    </div>
+
+                    <div class="card devices">
+                        <p class="card-header">Connected Devices</p>
+                        <ul>
+                            <li>
+                                <img src="images/watch.png" alt="smartwatch">
+                                <p>User smartwatch</p>
+                                <button class="disconnect">Disconnect</button>
+                            </li>
+                            <li>
+                                <img src="images/phone.png" alt="smartphone">
+                                <p>User smartphone</p>
+                                <button class="disconnect">Disconnect</button>
+                            </li>
+                        </ul>
+                        <button class="add-devices">Add Devices</button>
+                    </div>
+
+                    <div class="card heart-rate">
+                        <p class="card-header">Heart Rate</p>
+                    </div>
+
+
             </div>
-            </div>
-            <div class="card weekly">
-                <p>Weekly Activity Overview</p>
-                <select name="activity-type" id="select-weekly" >
-                    <option value="time">time (min)</option>
-                    <option value="calories">Calories burned (kcal)</option>
-                </select>
-                <div class="weekly-graph">
-                    <img src="images/graph-time.png" class="graph-time" alt="time graph">
-                    <img src="images/graph-calories.png" class="graph-calories" alt="calories graph">
+            <button class="show-ann">Show Announcements</button>
+            <div class="announcements">
+                <h2>Announcements</h2>
+                <button class="hide-ann">Hide Announcements</button>
+                <div class="ann">
+                    <h4>Site Under Maintenance</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In praesentium eligendi temporibus, fugiat est et? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, officiis.</p>
                 </div>
+                <div class="ann">
+                    <h4>Generic Fitness Pro</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, impedit? Necessitatibus totam quae eum adipisci laborum quasi? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, excepturi!
+                    </p>
+                </div>
+                <div class="ann">
+                    <h4>Generic Fitness 10K Event</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias animi harum assumenda accusantium voluptate tenetur vero numquam dolor soluta provident! Nulla sapiente impedit laudantium earum ab. Aliquam, et. Cum, illum?
+                    </p>
+                </div>
+
             </div>
         </main>
 
