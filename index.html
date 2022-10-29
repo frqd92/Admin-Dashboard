@@ -21,17 +21,17 @@
     
         <main>
             <div class="card welcome">
-            <p>Welcome VagPwner420</p>
+            <p>Welcome <span class="vag-pwner">VagPwner420</span></p>
             <div class="to-do">
                 <p>Daily Goals</p>
                 <ul>
                     <li>
-                        <span class="left-side">Steps</span> <span class="right-side">7500 / 10000 </span>
+                        <span class="left-side">Steps</span> <span class="right-side">7,500 / 10,000 </span>
                         <div class="bar">
                         <div class="bar-progress steps"></div>
                     </li>
                     <li>
-                        <span class="left-side">High Intensity Cardio</span> <span class="right-side">17min / 30min</span>
+                        <span class="left-side">Cardio</span> <span class="right-side">17min / 30min</span>
                         <div class="bar">
                         <div class="bar-progress cardio"></div>
                     </li>
@@ -41,7 +41,7 @@
                         <div class="bar-progress weights"></div>
                     </li>
                     <li>
-                        <span class="left-side">Sleep</span> <span class="right-side">7.2 / 8hr</span>
+                        <span class="left-side">Sleep</span> <span class="right-side">7.2hr / 8hr</span>
                         <div class="bar">
                         <div class="bar-progress sleep"></div>
                     </li>
@@ -50,9 +50,19 @@
                     <button id="add-btn">Add</button> 
                     <button id="remove-btn">Remove</button> 
                 </div>
-
             </div>
- 
+            </div>
+            <div class="card weekly">
+                <p>Weekly Activity Overview</p>
+                <select name="activity-type" id="select-weekly" >
+                    <option value="time">time (min)</option>
+                    <option value="calories">Calories burned (kcal)</option>
+                </select>
+                <div class="weekly-graph">
+                    <img src="images/graph-time.png" class="graph-time" alt="time graph">
+                    <img src="images/graph-calories.png" class="graph-calories" alt="calories graph">
+                </div>
+            </div>
         </main>
 
         <aside>
@@ -87,11 +97,10 @@
             </li>
         </ul>
         <ul class="links">
-            
             <li><a href="">Dashboard</a></li>
             <li><a href="">Workouts</a></li>
             <li><a href="">Statistics</a></li>
-            <li><a href="">Logbook</a></li>
+            <li><a href="">History</a></li>
             <li><a href="">Settings</a></li>
             <li><a href="">Support</a></li>
         </ul>
