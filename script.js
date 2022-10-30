@@ -13,13 +13,11 @@ navIcons.addEventListener("mouseover", ()=>{
 let navSvgs = document.getElementsByClassName("nav-svg");
 let svgLi = document.getElementsByClassName("svg-li");
 let navName = document.getElementsByClassName("nav-name");
-let icons = document.querySelector(".icons")
 
 
-
-icons.addEventListener("mouseover", (e)=>{
+//blue hover effect
+document.addEventListener("mouseover", (e)=>{
     let eTar = e.target.classList;
-
     if(eTar[0]!==undefined && eTar[0].includes("nav-svg")){
         let index = eTar[1] - 1;
         navName[index].classList.add("links-hovered");
@@ -29,9 +27,44 @@ icons.addEventListener("mouseover", (e)=>{
     }
 })
 
+//nav click
+for(let x=0;x<navSvgs.length;x++){
+    navSvgs[x].addEventListener("click",()=>{
+        let length = navSvgs[x].classList.length;
+        if(length==2){
+            navSvgs[x].classList.add("icons-clicked");
+            navName[x].classList.add("links-clicked");
+            removeOthers(x);
+        }
+        else{
+            navSvgs[x].classList.remove("icons-clicked");
+        }
+        if(x!==0){
+            underConstruction();
+        }
+        if(x==0){
+            cardContainer.style.visibility="visible";
+            underC.style.visibility="hidden";
+       
+        }
+    });
+}
+function removeOthers(x){
+    for(let z=0;z<navSvgs.length;z++){
+        if(z===x){}
+        else{
+            navSvgs[z].classList.remove("icons-clicked")
+            navName[z].classList.remove("links-clicked");
+    }
+    }            
+}
+let underC = document.getElementById("under-construction");
+function underConstruction(){
 
+    underC.style.visibility="visible";
+    cardContainer.style.visibility="hidden";
 
-
+}
 // document.addEventListener("click", (e)=>{
   
 //     if(e.target.classList=="svg-li" || e.target.classList=="nav-svg"){
