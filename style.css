@@ -29,7 +29,8 @@ body{
 .grid-container{
     display: grid;
     grid-template-columns: 9fr 1.5fr;
-    grid-template-rows: 1fr 91vh;
+    grid-template-rows: 1fr 99vh;
+   
 }
                                                 /* header stuff */
 header {
@@ -47,7 +48,7 @@ header {
 }
 header > img {
     width: 45px;
-   align-self: center;
+    align-self: center;
     border-radius: 0 0 0px 20px;
     border-bottom: 0.1px solid rgb(216, 210, 210);
 
@@ -122,7 +123,7 @@ aside img {
     width: 35px;
 }
 
-/* nav stuff */
+                                                    /* nav stuff */
 nav {
     position: fixed;
     width: 200px;
@@ -143,15 +144,18 @@ nav {
     align-items: center;
    
 }
+svg{
+   
+ 
+    padding:10px 20px;
+}
 
 .icons li {
     list-style: none;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
     align-self: center;
     justify-self: center;
-  
-  
 }
 
 .links {
@@ -165,30 +169,48 @@ nav {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.2s linear;
+    background: var(--nav-links); 
     border-radius: 50px 0 0 0;
-    background: var(--nav-links);
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+
 }
 
 .links-hover{
     visibility: visible;
     opacity: 1;
-   
 }
 
-li img {
-    width: 35px;
+.links-hovered{ /* For JS*/
+    background: rgba(55, 97, 213,0.8);
+    border-radius: 2px;
+    width: 110%;
+    height: 30px;
+    display: grid;
+    align-content: center;
+    justify-items: center;
 }
+svg:hover{
+    fill: rgba(55, 97, 213,0.8);
+}
+
 
 .links a {
     color: white;
     text-decoration: none;
     font-family: 'Comfortaa', cursive;
- 
+    
 }
 .links li {
     list-style: none;
 }
+
+
+
+
+
+
+
 
 
 
@@ -387,7 +409,7 @@ main{
 
 .to-do .left-side {
     font-weight:900;
-    color: #000000;
+    color: #9499cb;
     font-size: 1.1rem;
     font-family: 'Baloo 2', cursive;
 }
@@ -407,12 +429,14 @@ main{
     width: 30%;
     background-color: rgb(86, 65, 65);
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 12px;
   }
 .bar-progress{
-    background: linear-gradient(to right, #0f0c29, #1e1b40, #1a1a2c);
+    background: linear-gradient(to right, #5181cd, #467acd, #2662c3, #1156c6);
+    /* background: linear-gradient(to right, #110216, #0d0119, #150227, #120022); */
     border-radius: 10px;
     height: 10px;
-
+    
 }
 
 .steps {
@@ -468,6 +492,7 @@ select{
    border: none;
    color: white;
    font-family: 'Montserrat', sans-serif;
+   border-radius: 7px;
 }
 
 .weekly-graph .graph-time{
@@ -496,7 +521,9 @@ select{
     justify-items: center;
    
 }
-                                               
+.devices li img {
+    width: 35px;
+}                                         
 .devices li{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
@@ -530,11 +557,13 @@ font-family: 'Montserrat', sans-serif;*/
     max-width: 200px;
     max-height: 200px;
     display: grid;
+    justify-items: center;
 }
 
 .stats li{
     list-style: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Baloo 2', cursive;
+
     margin-bottom: 13px;
     border-bottom: 0.1px solid rgba(122, 115, 115, 0.399);
     display: grid;
@@ -544,12 +573,25 @@ font-family: 'Montserrat', sans-serif;*/
     justify-self: center;
 }
 .stats p{
-
+    color: #9499cb;
 }
-.stats div{
-    
+.stats ul{
+    width: 100%;
 }
-
+.stats span{
+   
+    margin-left: 10px;
+}
+.div-input-on{
+    background: rgba(152, 150, 150, 0.705);
+    border: 0.1px solid black;
+    border-radius: 5px;
+    height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 2px;
+  
+}
                                                 /* card heart */
 .heart-rate{
     height: 200px;
@@ -559,4 +601,3 @@ font-family: 'Montserrat', sans-serif;*/
 .heart-rate img{
    width: 85%
 }
-
