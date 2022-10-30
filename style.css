@@ -8,7 +8,7 @@ font-family: 'Montserrat', sans-serif;*/
 :root{
     --bg-black: #000000;
     --bg-main : #36434f;
-    --nav-links: rgba(43, 42, 54, 0.81);
+    --nav-links: rgba(43, 42, 54, 0.73);
     --card: rgba(114, 100, 100, 0.29);
     --card1-inner: rgba(88, 85, 58, 0.227);   /* --card1-inner: rgba(255, 251, 0, 0.227); yellowish*/
  
@@ -260,7 +260,7 @@ svg{
 .links-hovered, .links-clicked{ /* For JS*/
     background: rgba(55, 97, 213,0.8);
     border-radius: 2px;
-    width: 110%;
+    width: 112%;
     height: 30px;
     display: grid;
     align-content: center;
