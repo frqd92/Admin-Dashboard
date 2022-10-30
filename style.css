@@ -64,9 +64,11 @@ header h1{
 }
 header h2 {
     align-self: center;
-    justify-self: end;
+    justify-self: start;
+    margin-left: 5PX;
     font-family: 'Raleway', sans-serif;
     white-space: nowrap;
+    
 }
 header .search-bar {
     padding-right: 3rem;
@@ -109,7 +111,6 @@ aside{
     background: black;
     position: sticky;
     top: 0px;
-
 }
 .profile-icons{
     height:80px;
@@ -119,9 +120,61 @@ aside{
     align-items: center;
  
 }
-aside img {
+.icon.bell{
     width: 35px;
 }
+.icon.user{
+    width: 46px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.user-info{
+    position: absolute;
+    width: 180px;
+    height: 187px;
+    background: white;
+    top: 80px;
+    right: 100px;
+    background: rgba(53, 49, 97, 0.91);
+    border-radius: 0 0 15px 15px;
+    color: #000000;
+}
+.user-info-hidden{
+    visibility: hidden;
+}
+.user-info p{
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 5px;
+}
+
+.user-info ul{
+text-align: center;
+font-family: 'Comfortaa', cursive;
+}
+.user-info li{
+    list-style: none;
+    margin-bottom: 3px;
+    color: #62aeca;
+    width: 100%;
+    height: 35px;
+    display: grid;
+    align-items: center;
+}
+.user-info li:last-child:hover{
+    cursor: pointer;
+    background: rgb(23, 35, 129);
+    border-radius: 0 0 15px 15px;
+}
+.user-info li:hover {
+    cursor: pointer;
+    background: rgb(23, 35, 129);
+}
+
 
                                                     /* nav stuff */
 nav {
@@ -171,12 +224,12 @@ svg{
     background: var(--nav-links); 
     border-radius: 50px 0 0 0;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  
 }
 
 .links-hover{
     visibility: visible;
     opacity: 1;
+
 }
 
 .links-hovered, .links-clicked{ /* For JS*/
@@ -188,7 +241,12 @@ svg{
     align-content: center;
     justify-items: center;
 }
+.links-hovered{
+    box-shadow: inset 110px 0 0 0 #121232;
+    color: white;
+    transition: color 0.3s ease-in, box-shadow .3s ease-in-out;
 
+}
 .icons-clicked{/* For JS*/
     fill: rgba(55, 97, 213,0.8);
 }
@@ -201,7 +259,7 @@ svg:hover{
     color: white;
     text-decoration: none;
     font-family: 'Comfortaa', cursive;
-    
+
 }
 .links li {
     list-style: none;
@@ -212,10 +270,10 @@ svg:hover{
 
 #under-construction{
 position: absolute;
-top: 35%;
-left:15%;
+top: 50%;
+left:16%;
 font-family: 'Raleway', sans-serif;
-color: red;
+color: rgb(203, 30, 30);
 font-size: 1.5rem;
 text-align: center;
 visibility: hidden;
@@ -237,7 +295,7 @@ main{
     display: grid;
     grid-template-columns: 10fr 1fr;
     background: linear-gradient(to right, #0f0c29, #1e1b40, #1a1a2c);
-    position: relative;
+   
     
 }
                                             /* announcements  */
@@ -444,7 +502,7 @@ main{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 12px;
   }
 .bar-progress{
-    background: linear-gradient(to right, #0a316f, #082a61, #092757d9, #06275b);
+    background: linear-gradient(to right, #07234fc7, #071f45b6, #041d47c0, #06275bd3);
     /* background: linear-gradient(to right, #110216, #0d0119, #150227, #120022); */
     border-radius: 10px;
     height: 10px;

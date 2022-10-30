@@ -1,3 +1,30 @@
+//user profile window
+let profileIcon = document.querySelector(".user");
+let profileWindow = document.querySelector(".user-info");
+profileIcon.addEventListener("click", ()=>{
+    let visibility = profileWindow.classList.length;
+    if(visibility===3){
+        profileWindow.classList.remove("user-info-hidden");
+    }
+    else{
+        profileWindow.classList.add("user-info-hidden");
+    }
+})
+document.addEventListener("click", (e)=>{
+
+    if(e.target.className=="icon user"){
+     
+    }
+   else if(e.target.className!=="fil"){
+    profileWindow.classList.add("user-info-hidden");
+   }
+})
+
+
+
+
+
+
 //For secondary nav menu to appear on hover
 let navIcons = document.querySelector(".icons");
 let hoverNav = document.querySelector(".links");
@@ -8,8 +35,8 @@ navIcons.addEventListener("mouseover", ()=>{
     })
 })
 
-//make nav menu more interactive
 
+//make nav menu more interactive
 let navSvgs = document.getElementsByClassName("nav-svg");
 let svgLi = document.getElementsByClassName("svg-li");
 let navName = document.getElementsByClassName("nav-name");
@@ -40,12 +67,13 @@ for(let x=0;x<navSvgs.length;x++){
             navSvgs[x].classList.remove("icons-clicked");
         }
         if(x!==0){
-            underConstruction();
+            underConstruction(x);
         }
         if(x==0){
             cardContainer.style.visibility="visible";
             underC.style.visibility="hidden";
-       
+            currentTitle.textContent="Dashboard";
+    
         }
     });
 }
@@ -59,26 +87,24 @@ function removeOthers(x){
     }            
 }
 let underC = document.getElementById("under-construction");
-function underConstruction(){
-
+let currentTitle = document.getElementById("current-title");
+function underConstruction(x){
+    switch(x){
+        case 1: 
+        currentTitle.textContent="Workouts"; break;
+        case 2:
+        currentTitle.textContent="Statistics"; break;
+        case 3:
+        currentTitle.textContent="History"; break;
+        case 4:
+        currentTitle.textContent="Settings"; break;
+        case 5:
+        currentTitle.textContent="Support"; break;
+    }
     underC.style.visibility="visible";
     cardContainer.style.visibility="hidden";
 
 }
-// document.addEventListener("click", (e)=>{
-  
-//     if(e.target.classList=="svg-li" || e.target.classList=="nav-svg"){
-        
-//     }
-    
-// })
-
-
-
-
-
-
-
 
 
 //for bullshit graph thing
