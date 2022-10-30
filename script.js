@@ -1,6 +1,7 @@
 //user profile window
 let profileIcon = document.querySelector(".user");
 let profileWindow = document.querySelector(".user-info");
+
 profileIcon.addEventListener("click", ()=>{
     let visibility = profileWindow.classList.length;
     if(visibility===3){
@@ -11,16 +12,29 @@ profileIcon.addEventListener("click", ()=>{
     }
 })
 document.addEventListener("click", (e)=>{
-
-    if(e.target.className=="icon user"){
-     
-    }
-   else if(e.target.className!=="fil"){
-    profileWindow.classList.add("user-info-hidden");
+    if(e.target.className=="icon user"){}
+    else if(e.target.className!=="fil"){
+        profileWindow.classList.add("user-info-hidden");
    }
 })
 
-
+let notifications = document.querySelector(".notifications");
+let bell = document.querySelector(".bell");
+bell.addEventListener("click", ()=>{
+    let visibility = notifications.classList.length;
+    if(visibility===3){
+        notifications.classList.remove("notifications-hidden");
+    }
+    else{
+       notifications.classList.add("notifications-hidden");
+    }
+})
+document.addEventListener("click", (e)=>{
+    if(e.target.className=="icon bell"){}
+    else if(e.target.className!=="fil2"){
+        notifications.classList.add("notifications-hidden");
+   }
+})
 
 
 
