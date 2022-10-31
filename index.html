@@ -85,7 +85,7 @@
                 <div class="card stats">
                     <div class="card-header">Body Composition</div>
                     <ul>
-                        <li><p>Weight</p><div max="3" class="stat-figure">350</div><span>kg</span></li>
+                        <li><p>Weight</p><div class="stat-figure">350</div><span>kg</span></li>
                         <li><p>Lean Body Mass</p><div class="stat-figure">99.9</div><span>%</span></li>
                         <li><p>Body Fat</p><div class="stat-figure">18.2</div><span>%</span></li>
                         <li><p>Height</p><div class="stat-figure">69.0</div><span>in</span></li>
@@ -93,10 +93,25 @@
                     <button class="add-devices edit-button">Edit</button>
                 </div>
                     
-                    <div class="card heart-rate">
-                        <p class="card-header">Heart Rate</p>
-                        <img src="images/heart-rate-graph.png" alt="heart rate graph">
-                    </div>
+                <div class="card heart-rate">
+                    <p class="card-header">Heart Rate</p>
+                    <img src="images/heart-rate-graph.png" alt="heart rate graph">
+                </div>
+                <div class="card maps">
+                <img id="map" src="images/run-map.png" alt="run map">
+                <div class="run-stats">
+                    <h2 class="card-header">Outdoor Run</h2>
+                    <ul>
+                        <li><p>Distance</p><span>8.21km</span></li>
+                        <li><p>Time</p><span>34:32min</span></li>
+                        <li><p>Average Pace</p><span>14.3km/h</span></li>
+                    </ul>
+                <button class="add-devices">More Details</button>
+                </div>
+                </div>
+
+
+
 
 
             </div>
@@ -164,6 +179,7 @@
             <li class="svg-li">
                 <svg class="nav-svg 6" width="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M18.72,14.76C19.07,13.91 19.26,13 19.26,12C19.26,11.28 19.15,10.59 18.96,9.95C18.31,10.1 17.63,10.18 16.92,10.18C13.86,10.18 11.15,8.67 9.5,6.34C8.61,8.5 6.91,10.26 4.77,11.22C4.73,11.47 4.73,11.74 4.73,12A7.27,7.27 0 0,0 12,19.27C13.05,19.27 14.06,19.04 14.97,18.63C15.54,19.72 15.8,20.26 15.78,20.26C14.14,20.81 12.87,21.08 12,21.08C9.58,21.08 7.27,20.13 5.57,18.42C4.53,17.38 3.76,16.11 3.33,14.73H2V10.18H3.09C3.93,6.04 7.6,2.92 12,2.92C14.4,2.92 16.71,3.87 18.42,5.58C19.69,6.84 20.54,8.45 20.89,10.18H22V14.67H22V14.69L22,14.73H21.94L18.38,18L13.08,17.4V15.73H17.91L18.72,14.76M9.27,11.77C9.57,11.77 9.86,11.89 10.07,12.11C10.28,12.32 10.4,12.61 10.4,12.91C10.4,13.21 10.28,13.5 10.07,13.71C9.86,13.92 9.57,14.04 9.27,14.04C8.64,14.04 8.13,13.54 8.13,12.91C8.13,12.28 8.64,11.77 9.27,11.77M14.72,11.77C15.35,11.77 15.85,12.28 15.85,12.91C15.85,13.54 15.35,14.04 14.72,14.04C14.09,14.04 13.58,13.54 13.58,12.91A1.14,1.14 0 0,1 14.72,11.77Z" /></svg>
             </li>
+
         </ul>
         <ul class="links">
             <li class="nav-name"><a href="">Dashboard</a></li>
@@ -173,6 +189,8 @@
             <li class="nav-name"><a href="">Settings</a></li>
             <li class="nav-name"><a href="">Support</a></li>
         </ul>
+        <a href="https://github.com/frqd92" target="_blank"><svg id="github" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+
     </nav>
 
 
