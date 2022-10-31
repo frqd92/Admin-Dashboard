@@ -17,13 +17,13 @@ font-family: 'Montserrat', sans-serif;*/
 *{
     margin: 0;
     padding: 0;
-
+    
 }
 
 body{
     background: var(--bg-black);
     color: white;
-    
+
 }
 
 .grid-container{
@@ -31,7 +31,7 @@ body{
     grid-template-columns: 9fr 1.5fr;
     grid-template-rows: 1fr 99vh;
     width: 100vw;
- 
+   
    
 }
                                                 /* header stuff */
@@ -334,7 +334,7 @@ main{
                                             /* announcements  */
 
 .announcements{
-    height:100vh;
+    height:120vh;
     background: rgba(52, 54, 75, 0.246);
     justify-self: end;
     border-radius: 20px;
@@ -343,7 +343,11 @@ main{
     font-family: 'Comfortaa', cursive; 
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     user-select: none;
- 
+}
+.announcements img{
+    width: 130px;
+    border-radius: 5px;
+    margin: 5px 0;
 }
 .hide-ann, .show-ann {
     border: none;
@@ -385,6 +389,8 @@ main{
     border: 0.1px solid white;
     border-radius: 5px;
     padding: 10px;
+    display: grid;
+    justify-items: center;
 }
 .ann p{
     color: rgb(132, 79, 79);
@@ -1005,3 +1011,20 @@ main{
 }
 
 
+@media(max-height: 855px){
+
+    main{
+     height: 150vh;
+    }
+    .card-container{
+        padding-top: 15px;
+        height: 150vh;
+        row-gap: 20px;
+    }
+    #github{
+        top: -90px
+    }
+    .announcements{
+        height:133vh;
+    }
+}
