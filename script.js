@@ -1,3 +1,6 @@
+
+
+
 //user profile window
 let profileIcon = document.querySelector(".user");
 let profileWindow = document.querySelector(".user-info");
@@ -154,6 +157,9 @@ hideAnn.addEventListener("click", ()=>{
         
     })
 })
+
+
+
 
 //this shit doesn't even work
 window.addEventListener("scroll", ()=>{
